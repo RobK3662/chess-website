@@ -9,3 +9,4 @@ Die API, welche in diesem Projekt verwendet wird heißt: chess.com
 Außerdem möchten wir eine SQL Lite Datenbank verwenden, um Userdaten zu speichern.
 
 by Robert Koch & Lennart Möller
+hhhh
