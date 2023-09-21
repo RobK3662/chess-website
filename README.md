@@ -9,3 +9,4 @@ Im Frontend möchten wir mit React & Tailwin CSS arbeiten
 Im Backend mit Pyhton
 Die API, welche in diesem Projekt verwendet wird heißt: chess.com
 Außerdem möchten wir eine SQL Lite Datenbank verwenden, um Userdaten zu speichern
+TEST
