@@ -1,25 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
+<!doctype html>
+<html>
 
-    <body>
-        <div
-            class="container min-h-screen bg-[url('images/background.v1.avif')] bg-center bg-cover"
-        >
-            <nav>
-                <img src="######" />
-                <ul>
-                    <li><a href="elocalculator.html">Elo-Rechner</a></li>
-                    <li><a href="leaderboard.html">Leaderboard</a></li>
-                    <li><a href="#">Profil</a></li>
-                    <li><a href="ueberuns.html">Contact</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#000000] to-[#000000] h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[98%]  mx-auto">
+            <div>
+                <img class="w-16 cursor-pointer" src="images/homelogov1.jpg"">
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="elocalculator.html">Elo-Rechner</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="leaderboard.html">Rangliste</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="ueberuns.html">Über uns</a>
+                    </li>
                 </ul>
-            </nav>
-        </div>
-    </body>
+            </div>
+        
+            <div class="flex items-center gap-6">
+                <button class="bg-gray-300 text-black px-5 py-2 rounded-full hover:bg-gray-200">Log In</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+    </header>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+
 </html>
