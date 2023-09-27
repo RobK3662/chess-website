@@ -1,4 +1,7 @@
 /* Definieren Sie hier Ihre CSS-Stile */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
     font-family: Arial, sans-serif;
