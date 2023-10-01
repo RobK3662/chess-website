@@ -6,15 +6,23 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
     </head>
 
     <body class="bg-black">
-        <nav class="p-4 bg-white shadow md:flex md:items-center md:justify-between">
-            <div class="flex justify-between items-center">
+        <nav
+            class="p-4 bg-white shadow md:flex md:items-center md:justify-between"
+        >
+            <div class="font-semibold flex justify-between items-center">
                 <span class="text-2xl font-[Roboto] cursor-pointer">
-                    <img class="h-12 inline" src="./images/krone-homepage.jpg"/>
-                        Schach Projekt
+                    <img
+                        class="h-12 inline"
+                        src="./images/krone-homepage.jpg"
+                    />
+                    Schach Projekt
                 </span>
 
                 <span class="text-3xl cursor-pointer mx-2 md:hidden block">
@@ -22,29 +30,71 @@
                 </span>
             </div>
 
-            <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                
-                <li class="mx-6 my-6 md:my-0 text-xl hover:scale-110 hover:text-gray-300 duration-300">
+            <ul
+                class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+            >
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
                     <a href="elocalculator.html">Elo-Rechner</a>
                 </li>
-                <li class="mx-6 my-6 md:my-0 text-xl hover:scale-110 hover:text-gray-300 duration-300">
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
                     <a href="leaderboard.html">Rangliste</a>
                 </li>
-                <li class="mx-6 my-6 md:my-0 text-xl hover:scale-110 hover:text-gray-300 duration-300">
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
                     <a href="contact.html">Kontakt</a>
                 </li>
-                <li class="mx-6 my-6 md:my-0 text-xl hover:scale-110 hover:text-gray-300 duration-300">
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
                     <a href="#">Neuigkeiten</a>
                 </li>
 
-                <button class="bg-gray-400 text-white font-[Roboto] duration-300 px-4 py-2 mx-4 hover:bg-gray-200 rounded-full">Log In</button>
+                <!-- Button Verlinkung und Style Anpassung -->
+                <button
+                    class="bg-white shadow-lg border-solid border-2 border-black text-black font-[Roboto] font-semibold duration-300 px-4 py-2 mx-4 hover:bg-gray-300 rounded-full hover:scale-110"
+                >
+                    Log In
+                </button>
             </ul>
-
         </nav>
 
-        <div>
-            <h1 class="text-white mt-56 ml-28">FLIPPE</h1>
-            <pc class= "text-white ml-28">#ausgeflippt</p>
+        <div class="text-center mt-40">
+            <h1 class="text-7xl font-extrabold text-white">
+                Schach im Digitalen Zeitalter
+            </h1>
+            <p class="text-white mt-5 text-3xl font-bold">
+                Entwicklung einer dynamischen Rangliste und
+                Elo-Gewinnwahrscheinlichkeitsrechners
+            </p>
+            <p class="text-white text-xl font-semibold mt-5">
+                Robert Koch & Lennart Möller
+            </p>
+        </div>
+
+        <!-- Grid Anordnung der Bilder anpassen / ausrichten - Dame einfügen Links ? anderes GIF?-->
+        <div class="grid grid-cols-3 justify-evenly">
+            <div class="">
+                <img
+                    src="./images/istockphoto-1154467417-612x612-removebg-preview.png"
+                    class="xl:absolute bottom-42 right-0"
+                />
+            </div>
+
+            <div class="ml-20 mt-3">
+                <img src="./images/J4o.gif" class="mt-9" />
+            </div>
+
+            <div class="">
+                <img
+                    src="./images/istockphoto-172206344-612x612-removebg-preview.png"
+                    class="xl:absolute bottom-42 left-0 object-contain h-96 w-96 ml-32 mt-3"
+                />
+            </div>
         </div>
     </body>
 </html>
