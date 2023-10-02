@@ -70,7 +70,7 @@
 }
 
 .calculate-button {
-    background-color: #333;
+    background-color: black;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -78,9 +78,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 10px;
+    border: 1px solid white;
 }
 
 .calculate-button:hover {
-    background-color: #4caf50;
+    transform: scale(1.1);
 }
+
 //Elo-Rechner Ende
