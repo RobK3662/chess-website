@@ -1,3 +1,86 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+//Elo-Rechner start
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.input-container input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 16px; /* Setze die Schriftgröße auf eine feste Größe */
+}
+
+.input-container label {
+    display: none; /* Blende das Label aus */
+}
+
+.vs-container {
+    text-align: center;
+    margin-top: 90px;
+}
+
+.vs-text {
+    font-size: 36px;
+    color: white;
+}
+
+.header-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.header-text {
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    position: absolute;
+    top: 100px; /* Ändere diesen Wert, um die Verschiebung anzupassen */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result-input {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.calculate-button {
+    background-color: #333; /* Dunkles Grau */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px; /* Abgerundete Ecken */
+}
+
+.calculate-button:hover {
+    background-color: #4caf50;
+}
+//Elo-Rechner Ende

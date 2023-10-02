@@ -4,7 +4,53 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
-        <title>loginpage</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
     </head>
-    <body></body>
+    <body class="bg-black">
+        <nav
+            class="p-4 bg-white shadow md:flex md:items-center md:justify-between"
+        >
+            <div class="font-semibold flex justify-between items-center">
+                <span class="text-2xl font-[Roboto] cursor-pointer">
+                    <img
+                        class="h-12 inline"
+                        src="./images/krone-homepage.jpg"
+                    />
+                    <a href="index.html">Schach Projekt</a>
+                </span>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                </span>
+            </div>
+            <ul
+                class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+            >
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
+                    <a href="elocalculator.html">Elo-Rechner</a>
+                </li>
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
+                    <a href="leaderboard.html">Rangliste</a>
+                </li>
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
+                    <a href="contact.html">Kontakt</a>
+                </li>
+                <li
+                    class="mx-6 my-6 md:my-0 font-semibold text-xl hover:scale-110 hover:text-gray-300 duration-300"
+                >
+                    <a href="#">Neuigkeiten</a>
+                </li>
+            </ul>
+        </nav>
+    </body>
 </html>
