@@ -11,7 +11,6 @@
             rel="stylesheet"
         />
     </head>
-
     <body class="bg-black">
         <nav
             class="p-4 bg-white shadow md:flex md:items-center md:justify-between"
@@ -24,12 +23,10 @@
                     />
                     <a href="index.html">Schach Projekt</a>
                 </span>
-
                 <span class="text-3xl cursor-pointer mx-2 md:hidden block">
                     <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
                 </span>
             </div>
-
             <ul
                 class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
             >
@@ -53,8 +50,6 @@
                 >
                     <a href="#">Neuigkeiten</a>
                 </li>
-
-                <!-- Button Verlinkung und Style Anpassung -->
                 <button
                     class="bg-white shadow-lg border-solid border-2 border-black text-black font-[Roboto] font-semibold duration-300 px-4 py-2 mx-4 hover:bg-gray-300 rounded-full hover:scale-110"
                 >
@@ -63,21 +58,79 @@
             </ul>
         </nav>
 
-        <!-- Grid ? Spieler 1, 2, Button Berechnung Ergebnis Field-->
+        <div class="header-container">
+            <h1 class="header-text text-6xl font-bold">
+                Gewinnwahrscheinlichkeitsrechner
+            </h1>
+        </div>
 
-        <div class="flex items-center justify-center h-screen mb-11">
-            <div class="relative">
-                <input
-                    type="text"
-                    id="Elo-Rating"
-                    class="border-b rounded-full py-1 focus:outline-none focus:border-white focus:border-b-2 transition-colors peer"
-                />
-                <label
-                    for="Elo-Rating"
-                    class="absolute left-2 top-1 text-gray-600 cursor-text peer-focus:text-xs peer-focus:-top-4 peer-focus:text-white transition-all"
-                    >Elo-Rating Spieler X</label
-                >
+        <div class="flex flex-col justify-center items-center min-h-screen">
+            <div class="grid grid-cols-3 content-center justify-center">
+                <div class="input-container">
+                    <div class="player-image">
+                        <img
+                            src="./images/icon_kontakt_weiss_hintergrund_transparent_4-3.png"
+                        />
+                    </div>
+                    <input type="text" id="Elo-Rating1" required />
+                    <label for="Elo-Rating1">Elo-Rating Spieler X</label>
+                </div>
+
+                <div class="vs-container">
+                    <h1 class="vs-text">VS</h1>
+                </div>
+
+                <div class="input-container">
+                    <div class="player-image">
+                        <img
+                            src="./images/icon_kontakt_weiss_hintergrund_transparent_4-3.png"
+                        />
+                    </div>
+                    <input type="text" id="Elo-Rating2" required />
+                    <label for="Elo-Rating2">Elo-Rating Spieler Y</label>
+                </div>
+            </div>
+
+            <div class="result-container">
+                <input type="text" class="result-input" id="Result" readonly />
+                <button class="calculate-button" onclick="calculateResult()">
+                    Berechnen
+                </button>
             </div>
         </div>
+
+        <script>
+            // alles zur Berechnung ins Backend packen
+
+            function calculateResult() {
+                // Elo-Ratings der beiden Spieler aus den Eingabefeldern holen
+                const eloRating1 = parseFloat(
+                    document.getElementById("Elo-Rating1").value
+                );
+                const eloRating2 = parseFloat(
+                    document.getElementById("Elo-Rating2").value
+                );
+
+                // K-Faktor (kann angepasst werden)
+                const kFactor = 32;
+
+                // Berechne die erwarteten Punktzahlen (Elo-Erwartungswerte) für beide Spieler
+                const expectedScore1 =
+                    1 / (1 + Math.pow(10, (eloRating2 - eloRating1) / 400));
+                const expectedScore2 =
+                    1 / (1 + Math.pow(10, (eloRating1 - eloRating2) / 400));
+
+                // Berechne die Gewinnwahrscheinlichkeit für Spieler 1 (in Prozent)
+                const winProbability1 = (expectedScore1 * 100).toFixed(2);
+
+                // Berechne die Gewinnwahrscheinlichkeit für Spieler 2 (in Prozent)
+                const winProbability2 = (expectedScore2 * 100).toFixed(2);
+
+                // Gib die Gewinnwahrscheinlichkeiten aus
+                document.getElementById(
+                    "Result"
+                ).value = `Spieler 1: ${winProbability1}% Spieler 2: ${winProbability2}%`;
+            }
+        </script>
     </body>
 </html>
