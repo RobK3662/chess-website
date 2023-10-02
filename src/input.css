@@ -20,11 +20,11 @@
     color: white;
     padding: 8px 0;
     width: 100%;
-    font-size: 16px; /* Setze die Schriftgröße auf eine feste Größe */
+    font-size: 16px;
 }
 
 .input-container label {
-    display: none; /* Blende das Label aus */
+    display: none;
 }
 
 .vs-container {
@@ -48,7 +48,7 @@
     font-size: 44px;
     font-weight: bold;
     position: absolute;
-    top: 100px; /* Ändere diesen Wert, um die Verschiebung anzupassen */
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -70,14 +70,14 @@
 }
 
 .calculate-button {
-    background-color: #333; /* Dunkles Grau */
+    background-color: #333;
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 10px; /* Abgerundete Ecken */
+    border-radius: 10px;
 }
 
 .calculate-button:hover {
