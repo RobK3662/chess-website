@@ -625,6 +625,14 @@ video {
     height: 3rem;
 }
 
+.h-18 {
+    heigt: 4.5rem;
+}
+
+.h-24 {
+    height: 6rem;
+}
+
 .h-96 {
     height: 24rem;
 }
@@ -635,6 +643,13 @@ video {
 
 .w-96 {
     width: 24rem;
+}
+.w-18 {
+    width: 4.5rem;
+}
+
+.w-24 {
+    width: 6rem;
 }
 
 .w-full {
@@ -979,4 +994,44 @@ video {
     .xl\:absolute {
         position: absolute;
     }
+}
+.max-w-screen-sm {
+    max-width: 640px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-w-screen-md {
+    max-width: 768px;
+}
+
+.rounded-sm {
+    border-radius: 0.125rem /* 2px */;
+}
+.rounded-lg {
+    border-radius: 0.5rem /* 8px */;
+}
+.w-\[100px\] {
+    width: 100px;
+}
+
+.ml-14 {
+    margin-left: 3.5rem /* 56px */;
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem /* 16px */ * var(--tw-space-x-reverse));
+    margin-left: calc(1rem /* 16px */ * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem /* 12px */ * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem /* 12px */ * calc(1 - var(--tw-space-x-reverse)));
+}
+.rounded-xl {
+    border-radius: 0.75rem /* 12px */;
 }
