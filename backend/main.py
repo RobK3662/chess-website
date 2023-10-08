@@ -38,10 +38,6 @@ for category, player_data_list in leaderboard_data_as_json.items():
                 name TEXT,
                 status TEXT,
                 avatar TEXT,
-                trend_score_direction INT,
-                trend_score_delta INT,
-                trend_rank_direction INT,
-                trend_rank_delta INT,
                 flair_code TEXT,
                 win_count INT,
                 loss_count INT,
@@ -85,7 +81,7 @@ def get_daily_leaderboard():
     results = cursor.fetchall()
     #Ergebnisse ausgeben
     for row in results:
-        filtered_row = [cell for cell in row if cell is not None] #Da leider ein paar Werte als None gespeichert wurden muss hier eine filterung vorgenommen werden
+        filtered_row = [cell for cell in row if cell is not None] #Falls der Wert einer Zelle None sein sollte 
         print(filtered_row)
     conn.close()
 
@@ -103,7 +99,7 @@ def get_daily960_leaderboard():
         print(filtered_row)
     conn.close()
 
-daily960_leaderboard_table = get_daily960_leaderboard()
+daily960_leaderboard_table = get_daily960_leaderboard() 
 
 #live_rapid leaderboard get
 def get_live_rapid_leaderboard():
@@ -117,7 +113,7 @@ def get_live_rapid_leaderboard():
         print(filtered_row)
     conn.close()
 
-live_rapid_leaderboard_table = get_live_rapid_leaderboard()
+# live_rapid_leaderboard_table = get_live_rapid_leaderboard()
 
 #live_blitz
 def get_live_blitz_leaderboard():
@@ -131,7 +127,7 @@ def get_live_blitz_leaderboard():
         print(filtered_row)
     conn.close()
 
-live_blitz_leaderboard_table = get_live_blitz_leaderboard()
+# live_blitz_leaderboard_table = get_live_blitz_leaderboard()
 
 #live_bullet
 def get_live_bullet_leaderboard():
@@ -145,7 +141,7 @@ def get_live_bullet_leaderboard():
         print(filtered_row)
     conn.close()
 
-live_bullet_leaderboard_table = get_live_bullet_leaderboard()
+# live_bullet_leaderboard_table = get_live_bullet_leaderboard()
 
 # data = json.loads(json_data_leaderboard)
 # chess_player_info_list = {}
