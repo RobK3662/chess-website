@@ -77,61 +77,61 @@ for category, player_data_list in leaderboard_data_as_json.items():
 conn.commit()
 conn.close()
 
-# #daily leaderboard get
-# def get_daily_leaderboard():
-#     conn = sqlite3.connect("chess_data.db")
-#     cursor = conn.cursor()
-#     cursor.execute("SELECT * FROM chess_daily;")
-#     results = cursor.fetchall()
-#     #Ergebnisse ausgeben
-#     for row in results:
-#         if not None:
-#             print(row)
-#     conn.close()
+#daily leaderboard get
+def get_daily_leaderboard():
+    conn = sqlite3.connect("chess_data.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM chess_daily;")
+    results = cursor.fetchall()
+    #Ergebnisse ausgeben
+    for row in results:
+        filtered_row = [cell for cell in row if cell is not None] #Da leider ein paar Werte als None gespeichert wurden muss hier eine filterung vorgenommen werden
+        print(filtered_row)
+    conn.close()
 
-# daily_leaderboard_table = get_daily_leaderboard()
+daily_leaderboard_table = get_daily_leaderboard()
 
-# #daily960 leaderboard get
-# def get_daily960_leaderboard():
-#     conn = sqlite3.connect("chess_data.db")
-#     cursor = conn.cursor()
-#     cursor.execute("SELECT * FROM chess_daily960;")
-#     results = cursor.fetchall()
-#     #Ergebnisse ausgeben
-#     for row in results:
-#         if not None: 
-#             print(row)
-#     conn.close()
+#daily960 leaderboard get
+def get_daily960_leaderboard():
+    conn = sqlite3.connect("chess_data.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM chess_daily960;")
+    results = cursor.fetchall()
+    #Ergebnisse ausgeben
+    for row in results:
+        filtered_row = [cell for cell in row if cell is not None]
+        print(filtered_row)
+    conn.close()
 
-# daily960_leaderboard_table = get_daily960_leaderboard()
+daily960_leaderboard_table = get_daily960_leaderboard()
 
-# #live_rapid leaderboard get
-# def get_live_rapid_leaderboard():
-#     conn = sqlite3.connect("chess_data.db")
-#     cursor = conn.cursor()
-#     cursor.execute("SELECT * FROM chess_live_rapid;")
-#     results = cursor.fetchall()
-#     #Ergebnisse ausgeben
-#     for row in results:
-#         if not None: 
-#             print(row)
-#     conn.close()
+#live_rapid leaderboard get
+def get_live_rapid_leaderboard():
+    conn = sqlite3.connect("chess_data.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM chess_live_rapid;")
+    results = cursor.fetchall()
+    #Ergebnisse ausgeben
+    for row in results:
+        filtered_row = [cell for cell in row if cell is not None]
+        print(filtered_row)
+    conn.close()
 
-# live_rapid_leaderboard_table = get_live_rapid_leaderboard()
+live_rapid_leaderboard_table = get_live_rapid_leaderboard()
 
-# #live_blitz
-# def get_live_blitz_leaderboard():
-#     conn = sqlite3.connect("chess_data.db")
-#     cursor = conn.cursor()
-#     cursor.execute("SELECT * FROM chess_live_blitz;")
-#     results = cursor.fetchall()
-#     #Ergebnisse ausgeben
-#     for row in results:
-#         if not None:
-#             print(row)
-#     conn.close()
+#live_blitz
+def get_live_blitz_leaderboard():
+    conn = sqlite3.connect("chess_data.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM chess_live_blitz;")
+    results = cursor.fetchall()
+    #Ergebnisse ausgeben
+    for row in results:
+        filtered_row = [cell for cell in row if cell is not None]
+        print(filtered_row)
+    conn.close()
 
-# live_blitz_leaderboard_table = get_live_blitz_leaderboard()
+live_blitz_leaderboard_table = get_live_blitz_leaderboard()
 
 #live_bullet
 def get_live_bullet_leaderboard():
