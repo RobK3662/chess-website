@@ -127,7 +127,7 @@ def get_live_blitz_leaderboard():
         print(filtered_row)
     conn.close()
 
-live_blitz_leaderboard_table = get_live_blitz_leaderboard()
+# live_blitz_leaderboard_table = get_live_blitz_leaderboard()
 
 #live_bullet
 def get_live_bullet_leaderboard():
@@ -165,3 +165,4 @@ live_bullet_leaderboard_table = get_live_bullet_leaderboard()
 # print(f"{chess_player_info_list}") #Leider gibt es hier noch eine leere Liste aus --> Muss noch so gefixt werden, dass sie die top 50 Spieler als einzelne Listen in dem dictionary gespeichert werden
 # # for user_info in chess_player_info_list:
 #     # print(user_info)''
+#comment
