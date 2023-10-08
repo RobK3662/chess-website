@@ -53,11 +53,10 @@ for category, player_data_list in leaderboard_data_as_json.items():
         for player_data in player_data_list:
             cursor.execute(f"""
                 INSERT OR REPLACE INTO chess_{category} (
-                    player_id, username, score, rank, country, title, name, status, avatar, 
-                    trend_score_direction, trend_score_delta, trend_rank_direction, trend_rank_delta, flair_code, 
+                    player_id, username, score, rank, country, title, name, status, avatar, flair_code, 
                     win_count, loss_count, draw_count
                 )
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 player_data["player_id"],
                 player_data["username"],
@@ -68,9 +67,6 @@ for category, player_data_list in leaderboard_data_as_json.items():
                 player_data.get("name", ""),     # Falls "name" nicht vorhanden ist, wird ein leerer String verwendet
                 player_data["status"],
                 player_data["avatar"],
-                player_data["trend_score"],
-                player_data["trend_rank"]["direction"],
-                player_data["trend_rank"]["delta"],
                 player_data.get("flair_code", ""),  # Falls "flair_code" nicht vorhanden ist, wird ein leerer String verwendet
                 player_data["win_count"],
                 player_data["loss_count"],
