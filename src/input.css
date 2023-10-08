@@ -84,5 +84,37 @@
 .calculate-button:hover {
     transform: scale(1.1);
 }
-
 //Elo-Rechner Ende
+
+.max-w-screen-sm {
+    max-width: 640px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.max-w-screen-md {
+    max-width: 768px;
+}
+.rounded-sm {
+    border-radius: 0.125rem /* 2px */;
+}
+.w-\[100px\] {
+    width: 100px;
+}
+
+.ml-14 {
+    margin-left: 3.5rem /* 56px */;
+}
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem /* 16px */ * var(--tw-space-x-reverse));
+    margin-left: calc(1rem /* 16px */ * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem /* 12px */ * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem /* 12px */ * calc(1 - var(--tw-space-x-reverse)));
+}
