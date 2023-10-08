@@ -10,7 +10,9 @@
             href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="../backend/main.py" />
     </head>
+
     <body class="bg-black">
         <nav
             class="p-4 bg-white shadow md:flex md:items-center md:justify-between rounded-full"
@@ -64,21 +66,30 @@
 
         <div class="flex justify-center">
             <div class="px-4 mt-12 space-x-3">
-                <!-- onclick-funktion einfügen-->
-                <button class="calculate-button w-[100px]" onclick="">
-                    Classic
+                <!-- onclick-funktion einfügen (verschiedene Daten abrufen)-->
+                <button
+                    class="calculate-button w-[100px]"
+                    onclick="get_live_bullet_leaderboard()"
+                >
+                    Bullet
                 </button>
-                <button class="calculate-button w-[100px]" onclick="">
+                <button
+                    class="calculate-button w-[100px]"
+                    onclick="get_live_blitz_leaderboard()"
+                >
                     Blitz
                 </button>
                 <button class="calculate-button w-[100px]" onclick="">
                     Rapid
                 </button>
+                <button class="calculate-button w-[100px]" onclick="">
+                    Daily
+                </button>
             </div>
         </div>
 
         <!-- Start Rangliste-->
-        <main class="rounded-xl max-w-screen-md mx-auto bg-white mt-12 p-4">
+        <main class="rounded-xl max-w-screen-lg mx-auto bg-white mt-12 p-4">
             <section class="table">
                 <table class="w-full">
                     <thead>
@@ -106,6 +117,11 @@
                             <th
                                 class="px-4 py-2 w-[100px] font-semibold text-xl"
                             >
+                                Titel
+                            </th>
+                            <th
+                                class="px-4 py-2 w-[100px] font-semibold text-xl"
+                            >
                                 Land
                             </th>
                             <th
@@ -117,6 +133,11 @@
                                 class="px-4 py-2 w-[100px] font-semibold text-xl"
                             >
                                 Verloren
+                            </th>
+                            <th
+                                class="px-4 py-2 w-[100px] font-semibold text-xl"
+                            >
+                                Unentschieden
                             </th>
                         </tr>
                     </thead>
@@ -144,6 +165,12 @@
                                 1000
                             </td>
                             <td class="px-4 py-2 w-[100px] text-center">0</td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
                         </tr>
                         <tr class="bg-white">
                             <td class="px-4 py-2 w-[100px] text-center">1</td>
@@ -167,6 +194,12 @@
                                 1000
                             </td>
                             <td class="px-4 py-2 w-[100px] text-center">0</td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
                         </tr>
                         <tr class="bg-black text-white">
                             <td class="px-4 py-2 w-[100px] text-center">1</td>
@@ -190,6 +223,12 @@
                                 1000
                             </td>
                             <td class="px-4 py-2 w-[100px] text-center">0</td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
                         </tr>
                         <tr class="bg-white">
                             <td class="px-4 py-2 w-[100px] text-center">1</td>
@@ -213,6 +252,12 @@
                                 1000
                             </td>
                             <td class="px-4 py-2 w-[100px] text-center">0</td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
                         </tr>
                         <tr class="bg-black text-white">
                             <td class="px-4 py-2 w-[100px] text-center">1</td>
@@ -236,6 +281,12 @@
                                 1000
                             </td>
                             <td class="px-4 py-2 w-[100px] text-center">0</td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
+                            <td class="px-4 py-2 w-[100px] text-center">
+                                1000
+                            </td>
                         </tr>
 
                         <!-- Weitere Tabelleneinträge hier -->

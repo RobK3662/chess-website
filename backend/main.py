@@ -127,7 +127,7 @@ def get_live_blitz_leaderboard():
         print(filtered_row)
     conn.close()
 
-# live_blitz_leaderboard_table = get_live_blitz_leaderboard()
+live_blitz_leaderboard_table = get_live_blitz_leaderboard()
 
 #live_bullet
 def get_live_bullet_leaderboard():
@@ -141,7 +141,7 @@ def get_live_bullet_leaderboard():
         print(filtered_row)
     conn.close()
 
-# live_bullet_leaderboard_table = get_live_bullet_leaderboard()
+live_bullet_leaderboard_table = get_live_bullet_leaderboard()
 
 # data = json.loads(json_data_leaderboard)
 # chess_player_info_list = {}
