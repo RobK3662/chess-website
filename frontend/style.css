@@ -675,10 +675,6 @@ video {
   max-width: 48rem;
 }
 
-.max-w-screen-md {
-  max-width: 768px;
-}
-
 .max-w-screen-lg {
   max-width: 1024px;
 }
@@ -723,6 +719,10 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-2xl {
@@ -790,6 +790,11 @@ video {
   padding: 1.25rem;
 }
 
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -798,6 +803,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-2 {
@@ -1028,6 +1038,35 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem /* 12px */ * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem /* 12px */ * calc(1 - var(--tw-space-x-reverse)));
+}
+
+table tbody tr:nth-child(even) {
+  background-color: white;
+  color: black;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: black;
+  color: white;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* Hover-Effekt für ungerade Zeilen */
+
+.table tbody tr:nth-child(odd):hover {
+  background-color: ;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hover-Effekt für gerade Zeilen */
+
+.table tbody tr:nth-child(even):hover {
+  background-color: ;
+  cursor: pointer;
 }
 
 .hover\:scale-105:hover {

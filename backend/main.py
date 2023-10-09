@@ -1,6 +1,9 @@
 import requests
 import json
-import sqlite3 
+import sqlite3
+from flask import Flask, jsonify
+
+
 
 url = 'https://api.chess.com/pub/leaderboards'
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'}
@@ -116,6 +119,7 @@ def get_live_rapid_leaderboard():
 # live_rapid_leaderboard_table = get_live_rapid_leaderboard()
 
 #live_blitz
+
 def get_live_blitz_leaderboard():
     conn = sqlite3.connect("chess_data.db")
     cursor = conn.cursor()
@@ -126,8 +130,8 @@ def get_live_blitz_leaderboard():
         filtered_row = [cell for cell in row if cell is not None]
         print(filtered_row)
     conn.close()
-
-live_blitz_leaderboard_table = get_live_blitz_leaderboard()
+   
+#live_blitz_leaderboard_table = get_live_blitz_leaderboard()
 
 #live_bullet
 def get_live_bullet_leaderboard():
@@ -141,7 +145,8 @@ def get_live_bullet_leaderboard():
         print(filtered_row)
     conn.close()
 
-live_bullet_leaderboard_table = get_live_bullet_leaderboard()
+
+# live_bullet_leaderboard_table = get_live_bullet_leaderboard()
 
 # data = json.loads(json_data_leaderboard)
 # chess_player_info_list = {}
