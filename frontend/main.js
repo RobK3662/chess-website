@@ -123,7 +123,7 @@ const tableData = [
 ];
 
 // Anzahl der Elemente pro Seite
-const itemsPerPage = 5;
+const itemsPerPage = 6;
 
 // Funktion zum Anzeigen der Tabelle basierend auf der aktuellen Seite
 function displayTable(pageNumber) {
@@ -166,7 +166,20 @@ function createPaginationButtons() {
         const button = document.createElement("button");
         button.innerText = i;
         button.classList.add("px-0.2", "py-1", "text-white", "rounded");
+
+        // Hinzufügen einer Klasse "active" für die aktuelle Seite
+        if (i === 1) {
+            button.classList.add("active");
+        }
+
         button.addEventListener("click", () => {
+            // Entfernen der "active"-Klasse von allen Schaltflächen
+            const buttons = pagination.querySelectorAll("button");
+            buttons.forEach((btn) => btn.classList.remove("active"));
+
+            // Hinzufügen der "active"-Klasse zur ausgewählten Schaltfläche
+            button.classList.add("active");
+
             displayTable(i);
         });
         pagination.appendChild(button);
