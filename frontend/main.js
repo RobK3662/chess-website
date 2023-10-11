@@ -191,15 +191,14 @@ function createPaginationButtons() {
 displayTable(1);
 createPaginationButtons();
 
-/*
-
 // Erstelle eine leere Tabelle
 function createEmptyTable() {
     const table = document.getElementById("leaderboardData");
     table.innerHTML = "";
 }
 
-// Lade die Ranglisten-Daten 
+/*
+// Lade die Ranglisten-Daten
 function loadLeaderboard() {
     const apiUrl = "https://api.chess.com/pub/leaderboards";
 

@@ -71,7 +71,11 @@
                         Melde dich mit deinen Benutzerdaten an
                     </p>
                     <!-- Später Verknüpfung mit Datenbank hier bei Action -->
-                    <form action="" class="flex flex-col gap-4">
+                    <form
+                        action="login.php"
+                        method="post"
+                        class="flex flex-col gap-4"
+                    >
                         <input
                             class="p-2 mt-8 rounded-xl border"
                             type="text"
@@ -81,7 +85,7 @@
                         <div class="relative">
                             <input
                                 class="p-2 rounded-xl border w-full"
-                                type="text"
+                                type="password"
                                 name="Passwort"
                                 placeholder="Passwort"
                             />
