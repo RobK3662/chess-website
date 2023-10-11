@@ -119,26 +119,50 @@
     margin-left: calc(0.75rem /* 12px */ * calc(1 - var(--tw-space-x-reverse)));
 }
 
-table tbody tr:nth-child(even) {
+//Leaderboard
+
+.table tr {
+    position: relative;
+}
+
+.table tr::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background-color: white;
+}
+
+#pagination button.active {
+    text-decoration: underline;
+}
+
+/* Hover-Effekt für ungerade Zeilen */
+
+.table tbody tr:nth-child(odd):hover {
     background-color: white;
     color: black;
-}
-table tbody tr:nth-child(odd) {
-    background-color: black;
-    color: white;
-}
-body {
-    overflow: hidden;
-}
-/* Hover-Effekt für ungerade Zeilen */
-.table tbody tr:nth-child(odd):hover {
-    background-color: ;
-    color: white;
-    cursor: pointer;
 }
 
 /* Hover-Effekt für gerade Zeilen */
 .table tbody tr:nth-child(even):hover {
-    background-color: ;
-    cursor: pointer;
+    background-color: white;
+    color: black;
 }
+
+table tbody tr:nth-child(even) {
+    background-color: black;
+    color: white;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+body {
+    overflow: hidden;
+}
+//Leaderboard Ende
