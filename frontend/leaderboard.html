@@ -71,17 +71,17 @@
         <div class="flex justify-center">
             <div class="px-4 mt-12 space-x-3">
                 <!-- onclick-funktion einfügen (verschiedene Daten abrufen)-->
-                <button class="calculate-button w-[100px]" onclick="">
+                <button class="calculate-button w-[100px]" id="bulletButton">
                     Bullet
                 </button>
                 <button class="calculate-button w-[100px]" id="blitzButton">
                     Blitz
                 </button>
-                <button class="calculate-button w-[100px]" onclick="">
+                <button class="calculate-button w-[100px]" id="rapidButton">
                     Rapid
                 </button>
                 <button
-                    class="calculate-button w-[100px]" id="bulletButton">
+                    class="calculate-button w-[100px]" id="dailyButton">
                     Daily
                 </button>
             </div>
@@ -153,16 +153,15 @@
         <div class="flex justify-center mt-4">
             <div id="pagination" class="space-x-3"></div>
         </div>
-        <!-- <script src="../backend/main.py"></script>
-        <script src="main.js"></script> -->
         <script src="main.js"></script>
         <script>
-            // Fügen Sie den Eventlistener für das Laden des DOM-Inhalts hinzu
+            // Hinzufügen der Eventlistener für das Laden des DOM-Inhalts
             document.addEventListener("DOMContentLoaded", function () {
-                // Hier rufen Sie Ihre Funktionen auf, nachdem das DOM geladen wurde
-                // document.getElementById("bulletButton").addEventListener("click", loadBullet);
+                // Funktionsaufrufe, nachdem das DOM geladen wurde
+                document.getElementById("bulletButton").addEventListener("click", loadLiveBullet);
                 document.getElementById("blitzButton").addEventListener("click", loadLiveBlitz);
-                // Weitere Funktionen und Buttons hier
+                document.getElementById("rapidButton").addEventListener("click", loadLiveRapid);
+                document.getElementById("dailyButton").addEventListener("click", loadLiveDaily);
             });
         </script>
     </body>

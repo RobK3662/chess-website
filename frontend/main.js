@@ -63,11 +63,10 @@ function createPaginationButtons() {
 createPaginationButtons(); // Rufen Sie die Funktion auf, um die Seitensteuerung zu erstellen
 displayTable(currentPage); // Anzeigen der Elemente auf der aktuellen Seite
 
-// Ändern Sie die loadLiveBlitz-Funktion, um die Tabelle zu aktualisieren
+
 function loadLiveBlitz() {
     const apiUrl = "https://api.chess.com/pub/leaderboards"; 
-
-    // Führen Sie die API-Anfrage mit Fetch durch
+    // Durchführen der API-Anfrage mit Fetch
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -84,3 +83,60 @@ function loadLiveBlitz() {
             console.error("Fehler beim Abrufen der Daten:", error);
         });
 }
+
+function loadLiveRapid() {
+    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            if (Array.isArray(data.live_rapid)) {
+                tableData = data.live_rapid;
+                createPaginationButtons();
+                displayTable(currentPage); 
+            } else {
+                console.error("Der Wert für 'live_rapid' wurde nicht als Liste in der API-Antwort gefunden.");
+            }
+        })
+        .catch((error) => {
+            console.error("Fehler beim Abrufen der Daten:", error);
+        });
+}
+
+function loadLiveDaily() {
+    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            if (Array.isArray(data.daily)) {
+                tableData = data.daily; 
+                createPaginationButtons(); 
+                displayTable(currentPage); 
+            } else {
+                console.error("Der Wert für 'daily' wurde nicht als Liste in der API-Antwort gefunden.");
+            }
+        })
+        .catch((error) => {
+            console.error("Fehler beim Abrufen der Daten:", error);
+        });
+}
+
+function loadLiveBullet() {
+    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            if (Array.isArray(data.live_bullet)) {
+                tableData = data.live_bullet; 
+                createPaginationButtons(); 
+                displayTable(currentPage);
+            } else {
+                console.error("Der Wert für 'live_bullet' wurde nicht als Liste in der API-Antwort gefunden.");
+            }
+        })
+        .catch((error) => {
+            console.error("Fehler beim Abrufen der Daten:", error);
+        });
+}
+
+
+
