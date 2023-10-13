@@ -1061,10 +1061,10 @@ table tbody tr:nth-child(odd) {
     background-color: black;
     color: white;
 }
-
+/* 
 body {
     overflow: hidden;
-}
+} */
 
 /* Hover-Effekt für ungerade Zeilen */
 

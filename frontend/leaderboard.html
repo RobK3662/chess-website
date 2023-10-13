@@ -74,16 +74,14 @@
                 <button class="calculate-button w-[100px]" onclick="">
                     Bullet
                 </button>
-                <button class="calculate-button w-[100px]" onclick="">
+                <button class="calculate-button w-[100px]" id="blitzButton">
                     Blitz
                 </button>
                 <button class="calculate-button w-[100px]" onclick="">
                     Rapid
                 </button>
                 <button
-                    class="calculate-button w-[100px]"
-                    onclick="fetchLeaderboardData()"
-                >
+                    class="calculate-button w-[100px]" id="bulletButton">
                     Daily
                 </button>
             </div>
@@ -155,7 +153,17 @@
         <div class="flex justify-center mt-4">
             <div id="pagination" class="space-x-3"></div>
         </div>
-        <script src="../backend/main.py"></script>
+        <!-- <script src="../backend/main.py"></script>
+        <script src="main.js"></script> -->
         <script src="main.js"></script>
+        <script>
+            // Fügen Sie den Eventlistener für das Laden des DOM-Inhalts hinzu
+            document.addEventListener("DOMContentLoaded", function () {
+                // Hier rufen Sie Ihre Funktionen auf, nachdem das DOM geladen wurde
+                // document.getElementById("bulletButton").addEventListener("click", loadBullet);
+                document.getElementById("blitzButton").addEventListener("click", loadLiveBlitz);
+                // Weitere Funktionen und Buttons hier
+            });
+        </script>
     </body>
 </html>
