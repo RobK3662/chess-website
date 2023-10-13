@@ -165,4 +165,28 @@ table tbody tr:nth-child(odd) {
 body {
     overflow: hidden;
 }
+
 //Leaderboard Ende
+.table tr {
+    position: relative;
+}
+
+/* Fügen Sie einen weißen Balken unterhalb der Zeilen hinzu */
+.table tr::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px; /* Passen Sie die Höhe des Balkens nach Bedarf an */
+    background-color: white;
+}
+.h-10 {
+    height: 2.5rem /* 40px */;
+}
+.w-10 {
+    width: 2.5rem /* 40px */;
+}
+table tbody tr {
+    border-bottom: 2px solid white; /* Weißer Rand am unteren Rand */
+}

@@ -80,8 +80,7 @@
                 <button class="calculate-button w-[100px]" id="rapidButton">
                     Rapid
                 </button>
-                <button
-                    class="calculate-button w-[100px]" id="dailyButton">
+                <button class="calculate-button w-[100px]" id="dailyButton">
                     Daily
                 </button>
             </div>
@@ -91,6 +90,17 @@
         <main class="rounded-xl max-w-screen-lg mx-auto bg-white mt-12 p-4">
             <section class="table">
                 <table class="w-full">
+                    <colgroup>
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                        <col style="width: 11.11%" />
+                    </colgroup>
                     <thead>
                         <tr>
                             <th
@@ -136,15 +146,11 @@
                             <th
                                 class="px-4 py-2 w-[100px] font-semibold text-xl"
                             >
-                                Patt
+                                Unentschieden
                             </th>
                         </tr>
                     </thead>
-                    <tbody id="leaderboardData">
-
-                            <td></td>
-                        </tr>
-                    </tbody>
+                    <tbody id="leaderboardData" class="text-center"></tbody>
                 </table>
             </section>
         </main>
@@ -158,10 +164,18 @@
             // Hinzufügen der Eventlistener für das Laden des DOM-Inhalts
             document.addEventListener("DOMContentLoaded", function () {
                 // Funktionsaufrufe, nachdem das DOM geladen wurde
-                document.getElementById("bulletButton").addEventListener("click", loadLiveBullet);
-                document.getElementById("blitzButton").addEventListener("click", loadLiveBlitz);
-                document.getElementById("rapidButton").addEventListener("click", loadLiveRapid);
-                document.getElementById("dailyButton").addEventListener("click", loadLiveDaily);
+                document
+                    .getElementById("bulletButton")
+                    .addEventListener("click", loadLiveBullet);
+                document
+                    .getElementById("blitzButton")
+                    .addEventListener("click", loadLiveBlitz);
+                document
+                    .getElementById("rapidButton")
+                    .addEventListener("click", loadLiveRapid);
+                document
+                    .getElementById("dailyButton")
+                    .addEventListener("click", loadLiveDaily);
             });
         </script>
     </body>

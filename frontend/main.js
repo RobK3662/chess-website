@@ -15,7 +15,7 @@ function displayTable(page) {
         const country = player.country.slice(-2);
         row.innerHTML = `
             <td>${player.rank}</td>
-            <td><img src="${player.avatar}" alt="Avatar" class="h-16 w-16 rounded-full" /></td>
+            <td><img src="${player.avatar}" alt="Avatar" class="h-12 w-12 rounded-full mx-auto" /></td>
             <td>${player.username}</td>
             <td>${player.score}</td>
             <td>${player.title}</td>
@@ -63,12 +63,10 @@ function createPaginationButtons() {
 createPaginationButtons(); // Rufen Sie die Funktion auf, um die Seitensteuerung zu erstellen
 displayTable(currentPage); // Anzeigen der Elemente auf der aktuellen Seite
 
-
 //--------------------------Leaderboard functions-----------------------------------//
 
-
 function loadLiveBlitz() {
-    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    const apiUrl = "https://api.chess.com/pub/leaderboards";
     // Durchführen der API-Anfrage mit Fetch
     fetch(apiUrl)
         .then((response) => response.json())
@@ -79,7 +77,9 @@ function loadLiveBlitz() {
                 createPaginationButtons(); // Aktualisieren Sie die Seitensteuerung
                 displayTable(currentPage); // Anzeigen der Elemente auf der aktuellen Seite
             } else {
-                console.error("Der Wert für 'live_blitz' wurde nicht als Liste in der API-Antwort gefunden.");
+                console.error(
+                    "Der Wert für 'live_blitz' wurde nicht als Liste in der API-Antwort gefunden."
+                );
             }
         })
         .catch((error) => {
@@ -88,16 +88,18 @@ function loadLiveBlitz() {
 }
 
 function loadLiveRapid() {
-    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    const apiUrl = "https://api.chess.com/pub/leaderboards";
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
             if (Array.isArray(data.live_rapid)) {
                 tableData = data.live_rapid;
                 createPaginationButtons();
-                displayTable(currentPage); 
+                displayTable(currentPage);
             } else {
-                console.error("Der Wert für 'live_rapid' wurde nicht als Liste in der API-Antwort gefunden.");
+                console.error(
+                    "Der Wert für 'live_rapid' wurde nicht als Liste in der API-Antwort gefunden."
+                );
             }
         })
         .catch((error) => {
@@ -106,16 +108,18 @@ function loadLiveRapid() {
 }
 
 function loadLiveDaily() {
-    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    const apiUrl = "https://api.chess.com/pub/leaderboards";
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
             if (Array.isArray(data.daily)) {
-                tableData = data.daily; 
-                createPaginationButtons(); 
-                displayTable(currentPage); 
+                tableData = data.daily;
+                createPaginationButtons();
+                displayTable(currentPage);
             } else {
-                console.error("Der Wert für 'daily' wurde nicht als Liste in der API-Antwort gefunden.");
+                console.error(
+                    "Der Wert für 'daily' wurde nicht als Liste in der API-Antwort gefunden."
+                );
             }
         })
         .catch((error) => {
@@ -124,22 +128,21 @@ function loadLiveDaily() {
 }
 
 function loadLiveBullet() {
-    const apiUrl = "https://api.chess.com/pub/leaderboards"; 
+    const apiUrl = "https://api.chess.com/pub/leaderboards";
     fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
             if (Array.isArray(data.live_bullet)) {
-                tableData = data.live_bullet; 
-                createPaginationButtons(); 
+                tableData = data.live_bullet;
+                createPaginationButtons();
                 displayTable(currentPage);
             } else {
-                console.error("Der Wert für 'live_bullet' wurde nicht als Liste in der API-Antwort gefunden.");
+                console.error(
+                    "Der Wert für 'live_bullet' wurde nicht als Liste in der API-Antwort gefunden."
+                );
             }
         })
         .catch((error) => {
             console.error("Fehler beim Abrufen der Daten:", error);
         });
 }
-
-
-
