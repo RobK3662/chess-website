@@ -64,6 +64,9 @@ createPaginationButtons(); // Rufen Sie die Funktion auf, um die Seitensteuerung
 displayTable(currentPage); // Anzeigen der Elemente auf der aktuellen Seite
 
 
+//--------------------------Leaderboard functions-----------------------------------//
+
+
 function loadLiveBlitz() {
     const apiUrl = "https://api.chess.com/pub/leaderboards"; 
     // Durchführen der API-Anfrage mit Fetch
