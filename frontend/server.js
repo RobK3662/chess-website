@@ -8,15 +8,16 @@ const db = new sqlite3.Database('user.db');
 app.use(express.json());
 app.use(express.static('public'));
 //Registrierung
-app.post('/register', (req, req) => {
+app.post('/register', (req, res) => {
     const { username, password } = req.body;
     db.run('INSERT INTO users (username, password) VALUES (?, ?)', [username, password], (err) => {
-        if (err){
+        if (err) {
             return res.status(500).send('Fehler bei der Registrierung.');
         }
         res.send('Registrierung war erfolgreich, vielen Dank!');
-    )};
+    });
 });
+
 
 //Login
 app.post('/login', (req, res) => {
@@ -33,7 +34,12 @@ app.post('/login', (req, res) => {
   });
 });
 
-// Server starten
-app.listen(port, () => {
-  console.log(`Server läuft auf http://localhost:${port}`);
+// Zeige die HTML-Seite an
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + '/leaderboard.html');
+});
+
+// Starte den Server und höre auf Anfragen von jedem Host
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server läuft auf http://localhost:${port}`);
 });
