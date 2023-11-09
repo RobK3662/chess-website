@@ -89,9 +89,10 @@ def get_daily_leaderboard():
     conn.close()
 
 #daily_leaderboard_table = get_daily_leaderboard()
-
 #daily960 leaderboard get
+
 def get_daily960_leaderboard():
+
     conn = sqlite3.connect("chess_data.db")
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM chess_daily960;")
