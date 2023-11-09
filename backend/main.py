@@ -1,7 +1,6 @@
 import requests
-import json
 import sqlite3
-from flask import Flask, jsonify
+
 
 
 
@@ -16,6 +15,7 @@ data_leaderboard = get_data_from_webpage(url, headers)
 # print(f'Top 50 Leaderboard: \n{data_leaderboard.text}')
 
 
+#blabla
 
 #SQLITE
 leaderboard_data_as_json = data_leaderboard.json()
