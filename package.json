@@ -1,5 +1,19 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
+  },
+  "name": "chess-website",
+  "description": "Das ist ein Projekt, welches sich zum Ziel gesetzt hat eine Website zu entwickeln, auf der es ein Leaderboard & Elo- Win-Rate-Calculator gibt.\r Im Frontend möchten wir mit React & Tailwind CSS arbeiten.\r Im Backend mit Pyhton.\r Die API, welche in diesem Projekt verwendet wird heißt: chess.com\r Außerdem möchten wir eine SQL Lite Datenbank verwenden, um Userdaten zu speichern.",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
