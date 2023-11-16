@@ -66,27 +66,22 @@
             >
                 <!-- Links -->
                 <div class="md:w-1/2 px-8 md:px-16">
-                    <h2 class="font-bold text-2xl text-black">Anmeldung</h2>
+                    <h2 class="font-bold text-2xl text-black">Login</h2>
                     <p class="text-xs mt-4 text-black font-semibold">
                         Melde dich mit deinen Benutzerdaten an
                     </p>
-                    <!-- Später Verknüpfung mit Datenbank hier bei Action -->
-                    <form
-                        action="server.js/login"
-                        method="post"
-                        class="flex flex-col gap-4"
-                    >
+                    <form action="server.js/login" method="post" class="flex flex-col gap-4">
                         <input
                             class="p-2 mt-8 rounded-xl border"
                             type="text"
-                            name="username"
+                            name="Benutzername"
                             placeholder="Benutzername"
                         />
                         <div class="relative">
                             <input
                                 class="p-2 rounded-xl border w-full"
                                 type="password"
-                                name="password"
+                                name="Passwort"
                                 placeholder="Passwort"
                             />
                         </div>
@@ -96,12 +91,11 @@
                         >
                             Login
                         </button>
-                        <a href="registration.html">
-                            <h1 class="flex justify-center font-bold">
-                                <u>Registriere dich hier!</u>
-                            </h1>
-                        </a>
                     </form>
+                    <form action="/register" method="post" class="flex flex-col gap-4">
+
+                    </form>
+
                 </div>
 
                 <!-- Rechts -->
