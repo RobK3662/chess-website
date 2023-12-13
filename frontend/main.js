@@ -1,10 +1,10 @@
-const itemsPerPage = 10; // Anzahl der Elemente pro Seite
-let currentPage = 1; // Aktuelle Seite
+const itemsPerPage = 10;
+let currentPage = 1;
 
 // Funktion zum Anzeigen der Elemente basierend auf der aktuellen Seite
 function displayTable(page) {
     const table = document.getElementById("leaderboardData");
-    table.innerHTML = ""; // Leeren Sie die Tabelle
+    table.innerHTML = ""; // Tabelle leeren
 
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
@@ -60,8 +60,8 @@ function createPaginationButtons() {
     }
 }
 
-createPaginationButtons(); // Rufen Sie die Funktion auf, um die Seitensteuerung zu erstellen
-displayTable(currentPage); // Anzeigen der Elemente auf der aktuellen Seite
+createPaginationButtons();
+displayTable(currentPage);
 
 //--------------------------Leaderboard functions-----------------------------------//
 
@@ -73,9 +73,9 @@ function loadLiveBlitz() {
         .then((data) => {
             // Überprüfen, ob "live_blitz" in der Antwort vorhanden ist und eine Liste (Array) ist
             if (Array.isArray(data.live_blitz)) {
-                tableData = data.live_blitz; // Aktualisieren Sie die tableData
-                createPaginationButtons(); // Aktualisieren Sie die Seitensteuerung
-                displayTable(currentPage); // Anzeigen der Elemente auf der aktuellen Seite
+                tableData = data.live_blitz; // Aktualisieren  tableData
+                createPaginationButtons(); // Aktualisieren Seitensteuerung
+                displayTable(currentPage);
             } else {
                 console.error(
                     "Der Wert für 'live_blitz' wurde nicht als Liste in der API-Antwort gefunden."
