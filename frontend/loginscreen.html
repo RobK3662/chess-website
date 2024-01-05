@@ -72,26 +72,26 @@
                     </p>
                     <!-- Später Verknüpfung mit Datenbank hier bei Action -->
                     <form
-                        action="server.js/login"
-                        method="post"
+                        onsubmit="return login(event)"
                         class="flex flex-col gap-4"
                     >
                         <input
                             class="p-2 mt-8 rounded-xl border"
                             type="text"
-                            name="username"
+                            id="username"
                             placeholder="Benutzername"
                         />
                         <div class="relative">
                             <input
                                 class="p-2 rounded-xl border w-full"
                                 type="password"
-                                name="password"
+                                id="password"
                                 placeholder="Passwort"
                             />
                         </div>
 
                         <button
+                            type="submit"
                             class="bg-white rounded-xl text-black border-solid border-2 border-black py-2 hover:scale-105 duration-300 font-bold"
                         >
                             Login
@@ -113,5 +113,7 @@
                 </div>
             </div>
         </section>
+
+        <script src="main.js"></script>
     </body>
 </html>

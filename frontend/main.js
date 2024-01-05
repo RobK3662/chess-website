@@ -65,6 +65,8 @@ displayTable(currentPage);
 
 //--------------------------Leaderboard functions-----------------------------------//
 
+// Button Farbänderung nach Auswahl
+
 function changeColor(button) {
     const buttons = document.querySelectorAll(".calculate-button");
     buttons.forEach((btn) => {
@@ -155,4 +157,21 @@ function loadLiveBullet() {
         .catch((error) => {
             console.error("Fehler beim Abrufen der Daten:", error);
         });
+}
+
+//Login Bereich
+
+function login(event) {
+    event.preventDefault(); // Verhindert Standardverhalten des Formulars (Seitenneuladen)
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === "test" && password === "123") {
+        alert("Erfolgreich eingeloggt!");
+        return true;
+    } else {
+        alert("Falscher Benutzername oder Passwort!");
+        return false; // Verhindere das Absenden des Formulars
+    }
 }
