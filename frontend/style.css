@@ -997,8 +997,20 @@ video {
   border: 1px solid white;
 }
 
+.calculate-button:active {
+  background-color: white;
+  /* Hintergrundfarbe beim Klicken */
+  color: black;
+  /* Textfarbe beim Klicken */
+}
+
 .calculate-button:hover {
   transform: scale(1.1);
+}
+
+.color-change {
+  background-color: white;
+  color: black;
 }
 
 //Elo-Rechner Ende
@@ -1082,10 +1094,6 @@ table tbody tr:nth-child(even) {
 table tbody tr:nth-child(odd) {
   background-color: black;
   color: white;
-}
-
-body {
-  overflow: hidden;
 }
 
 //Leaderboard Ende

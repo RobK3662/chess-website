@@ -65,6 +65,16 @@ displayTable(currentPage);
 
 //--------------------------Leaderboard functions-----------------------------------//
 
+function changeColor(button) {
+    const buttons = document.querySelectorAll(".calculate-button");
+    buttons.forEach((btn) => {
+        btn.classList.remove("active");
+        btn.classList.remove("color-change");
+    });
+    button.classList.add("active");
+    button.classList.add("color-change");
+}
+
 function loadLiveBlitz() {
     const apiUrl = "https://api.chess.com/pub/leaderboards";
     // Durchführen der API-Anfrage mit Fetch
