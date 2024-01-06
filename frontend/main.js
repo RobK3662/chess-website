@@ -169,6 +169,7 @@ function login(event) {
 
     if (username === "test" && password === "123") {
         alert("Erfolgreich eingeloggt!");
+        window.location.href = "index.html"; // Weiterleitung zur index.html
         return true;
     } else {
         alert("Falscher Benutzername oder Passwort!");
